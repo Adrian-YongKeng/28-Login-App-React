@@ -12,7 +12,7 @@ export default function Login() {
     const authContext = useContext(AuthContext);
 
     function login (){
-        const isCorrectUsername = username === "Adrian" || "adrian@email.com";
+        const isCorrectUsername = username === "Adrian" || username ==="adrian@email.com";
         const isCorrectPassword = password === "123";
         if (isCorrectUsername && isCorrectPassword) {
             authContext.setToken("123");
@@ -32,7 +32,7 @@ export default function Login() {
             <Form.Label>Email address</Form.Label>
             <Form.Control 
                 type="email" 
-                placeholder="adrian@email.com"
+                placeholder="adrian@email.com || Adrian"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
             />
